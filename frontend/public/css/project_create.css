@@ -1,0 +1,233 @@
+/* D:\Assignment\SEM 4\MBD\myits-collab\frontend\public\css\styles.css */
+
+/* --- General Resets & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- App Container Layout --- */
+.app-container {
+    display: flex;
+    width: 100%;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 10px 0 30px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.sidebar-header .logo {
+    width: 150px;
+    height: auto;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #555;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item i {
+    margin-right: 15px;
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e0f2ff;
+    color: #007bff;
+}
+
+.nav-item.active {
+    font-weight: 600;
+}
+
+.nav-item.active i {
+    color: #007bff;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* --- Main Content Area Styling --- */
+.main-content {
+    margin: 0;
+    flex-grow: 1;
+    padding: 0; 
+    background-color: #f0f2f5;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Pastikan header selalu di atas */
+}
+
+.user-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.user-info i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* --- Form & Section Styling --- */
+.form-section {
+    padding: 30px;
+}
+
+.form-section h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 75px;
+    color: #0b188d;
+    font-size: 35px;
+}
+#createProjectForm h2 {
+    margin-bottom: 25px; 
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 800px; /* Lebar maksimum form */
+    margin: 0 auto; /* Form di tengah section */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button[type="submit"] {
+    background-color: #0b188d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    width: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #070f51;
+}
+
+/* --- Messages Styling --- */
+p#message, p#error {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p#message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+p#error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+p#message:empty,
+p#error:empty {
+    display: none;
+}
