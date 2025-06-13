@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyITS Collab - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/myitscolab.png" alt="MyITS Collab Logo" class="logo">
+                <h2>MyITS Collab</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="project_create.html" class="nav-item">
+                    <i class="fas fa-plus-circle"></i> Create Project
+                </a>
+                <a href="my_projects.html" class="nav-item">
+                    <i class="fas fa-project-diagram"></i> My Projects
+                </a>
+                </nav>
+            <div class="sidebar-footer">
+                <button id="logoutButton" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="loggedInUserName"></span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="projectSearchInput" placeholder="Find your project...">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+            </header>
+
+            <section class="projects-section">
+                <h2>Find your project</h2>
+                <div id="projects-container" class="projects-grid">
+                    <p>Loading projects...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

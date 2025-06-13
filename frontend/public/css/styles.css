@@ -1,0 +1,328 @@
+/* C:\Users\Faith\Downloads\myits-collab\frontend\public\css\styles.css */
+
+/* --- General Resets & Base Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333;
+  line-height: 1.6;
+  display: flex; /* Use flexbox for the main app container */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* --- App Container Layout --- */
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  position: sticky; /* Sticky sidebar if content scrolls */
+  top: 0;
+  height: 100vh; /* Full height */
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 10px 0 30px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.sidebar-header .logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+  color: #007bff; /* ITS Blue */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  flex-grow: 1; /* Allows nav to take available space */
+  list-style: none;
+  padding: 0 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #555;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item i {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.nav-item:hover {
+  background-color: #e0f2ff; /* Light blue on hover */
+  color: #007bff;
+}
+
+.nav-item.active {
+  background-color: #e0f2ff;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.nav-item.active i {
+  color: #007bff;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.logout-btn {
+  background-color: #dc3545; /* Red for logout */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* --- Main Content Area Styling --- */
+.main-content {
+  flex-grow: 1; /* Takes remaining space */
+  padding: 30px;
+  background-color: #f0f2f5;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.user-info i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Projects Section --- */
+.projects-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+  position: relative; /* For the status badge */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.project-card strong {
+  color: #333;
+}
+
+.project-card .status-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-badge.open {
+  background-color: #28a745; /* Green */
+}
+
+.status-badge.closed {
+  background-color: #dc3545; /* Red */
+}
+
+.project-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Basic Form Styling (for project_create.html too) --- */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form button[type="submit"] {
+  background-color: #28a745; /* Green submit button */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+  width: auto;
+  display: block; /* Make it a block element */
+  margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* --- Messages --- */
+p#message,
+p#error {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+p#message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+p#error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
